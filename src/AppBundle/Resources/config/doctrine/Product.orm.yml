@@ -1,0 +1,18 @@
+AppBundle\Entity\Product:
+  type: entity
+  table: product
+  id:
+    productId:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      type: string
+      length: 100
+  manyToOne:
+    category:
+      targetEntity: AppBundle\Entity\Category
+      mappedBy: product
+      joinColumn:
+        name: category_id
+        referencedColumnName: category_id

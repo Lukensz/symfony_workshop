@@ -1,0 +1,7 @@
+AppBundle\Command\AddCategoryCommand:
+  properties:
+    name:
+      - NotBlank: ~
+      - Length:
+          min: 2
+          max: 100
